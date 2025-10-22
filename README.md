@@ -1,6 +1,6 @@
-String Analyzer Service
+# String Analyzer Service
 
-Overview
+## Overview
 This is a RESTful API service built with Python and FastAPI for analyzing strings and computing/storing their properties, as per the Backend Wizards Stage 1 task. It uses an in-memory dictionary for storage (data resets on restart). Properties computed include length, is_palindrome, unique_characters, word_count, sha256_hash, and character_frequency_map.
 
 Endpoints include:
@@ -12,7 +12,7 @@ GET /strings/filter-by-natural-language: Filter strings using natural language q
 DELETE /strings/{string_value}: Delete a string by value.
 This is a simple in-memory implementation. For production, consider adding a persistent database like SQLite or PostgreSQL.
 
-Setup Instructions
+# Setup Instructions
 
 1. Clone the repository
 
@@ -83,7 +83,8 @@ curl -X POST http://127.0.0.1:8000/strings -H "Content-Type: application/json" -
 Environment Variables
 None. This implementation does not require any environment variables.
 
-Additional Notes
+## Additional Notes
+
 Storage is in-memory, so data is lost on server restart.
 Error handling and validation are implemented as per the task specs.
 For testing: Consider adding unit tests with pytest (install via pip install pytest and run pytest if a tests.py file is added).
