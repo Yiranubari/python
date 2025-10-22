@@ -7,6 +7,9 @@ from dateutil.tz import tzutc
 import re
 
 app = FastAPI()
+@app.get("/")
+def root():
+    return {"message": "String Analyzer API is running"}
 
 # In-memory storage: key = sha256_hash, value = dict with details
 strings_db = {}
